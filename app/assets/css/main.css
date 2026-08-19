@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Libertinus Serif';
+    src: url(/fonts/LibertinusSerif-Regular.ttf) format('truetype');
+}
+
+:root {
+    --bg-primary: #0E0E0E;
+    --bg-secondary: #F1F1F1;
+    --text-primary: #B7B7B7;
+    --text-secondary: #353535;
+    --white-line: #B7B7B7;
+    --black-line: #353535;
+    --font-libertinus: 'Libertinus Serif';
+
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-libertinus);
+}
