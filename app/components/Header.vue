@@ -1,20 +1,38 @@
 <template>
-  <header
-    class="w-full px-40 pt-12 pb-6 flex items-center justify-between border-b"
-  >
-    <!-- left side, name -->
-    <div class="text-2xl tracking-[0.2rem]">
-      <a class="pr-5 border-r" href="/"> MUHAMMAD</a>
-      <a class="pl-4" href="/"> NAUFAL RAMADHAN</a>
+  <header class="items-stretch">
+
+    <div class="w-full px-40 flex items-center self-stretch justify-between">
+      <!-- left side, name -->
+      <div class="text-2xl flex tracking-[0.2rem]">
+        <a class="pt-12 pb-6 pr-5 self-stretch flex items-center" href="/"> MUHAMMAD</a>
+        <span class="w-px self-stretch bg-[#B7B7B7]/75"></span>
+        <a class="pt-12 pb-6 pl-5" href="/"> NAUFAL RAMADHAN</a>
+      </div>
+
+      <!-- right side, nav -->
+      <nav class="pt-12 pb-6 text-2xl">
+        |
+        <a href="#home" class="nav-link"> home</a>
+        |
+        <a href="#about" class="nav-link"> about</a>
+        |
+        <a href="#cv" class="nav-link"> cv</a>
+        |
+        <a href="#projects" class="nav-link"> projects</a>
+        |
+        <a href="#about" class="nav-link"> contact</a>
+        |
+      </nav>
     </div>
 
-    <!-- right side, nav -->
-    <nav class="text-2xl tracking-[0.05rem]">
-      <a href="#home">| home </a>
-      <a href="#about">| about </a>
-      <a href="#cv">| cv </a>
-      <a href="#projects">| projects </a>
-      <a href="#about">| about |</a>
-    </nav>
+    <!-- horizontal gradient line -->
+    <div class="h-px w-3/4 bg-gradient-to-r from-[#B7B7B7] to-transparent"></div>
+
   </header>
 </template>
+
+<style scoped>
+.nav-link {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-[#B7B7B7] after:transition-all after:duration-300 hover:after:w-full;
+}
+</style>
