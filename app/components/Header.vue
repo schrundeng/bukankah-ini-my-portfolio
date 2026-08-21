@@ -5,7 +5,7 @@
       <!-- left side, name -->
       <div class="text-2xl flex tracking-[0.2rem]">
         <a class="pt-12 pb-6 pr-5 self-stretch flex items-center" href="/"> MUHAMMAD</a>
-        <span class="w-px self-stretch bg-[#B7B7B7]/75"></span>
+        <span class="w-px self-stretch bg-[#B7B7B7]"></span>
         <a class="pt-12 pb-6 pl-5" href="/"> NAUFAL RAMADHAN</a>
       </div>
 
