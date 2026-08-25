@@ -38,7 +38,8 @@
             <NuxtLink to="/pics" class="flex flex-col gap-3 shrink-0 group cursor-pointer">
                 <!-- top line -->
                 <div class="relative w-full h-4 flex items-center">
-                    <div class="border-t-[1.5px] border-[#353535] absolute top-1/2 right-0"></div>
+                    <div class="border-t-[1.5px] border-[#353535] absolute top-1/2 right-0 '-left-[100vw]' : 'left-0'">
+                    </div>
                     <span class="w-px h-3 black-line absolute top-1/2 left-0"></span>
                     <span
                         class="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary px-2 text-xs text-secondary z-10">
@@ -57,7 +58,8 @@
 
                 <!-- bottom line -->
                 <div class="relative w-full h-4 flex items-center justify-center">
-                    <div class="border-t-[1.5px] border-[#353535] absolute top-1/2 right-0"></div>
+                    <div class="border-t-[1.5px] border-[#353535] absolute top-1/2 right-0 '-left-[100vw]' : 'left-0'">
+                    </div>
                     <span class="w-px h-3 black-line absolute bottom-1/2 left-0"></span>
                     <p class="relative text-secondary z-10 bg-secondary px-3 text-xs whitespace-nowrap">
                         Explore Archive
