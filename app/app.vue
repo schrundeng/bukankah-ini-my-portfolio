@@ -4,5 +4,11 @@
       <Header />
       <HeroSection />
     </div>
+    <AboutSection />
+    <TechStackSection />
+    <ProjectsSection />
+    <CertificatesSection />
+    <PicturesSection />
+    <FooterSection />
   </div>
 </template>

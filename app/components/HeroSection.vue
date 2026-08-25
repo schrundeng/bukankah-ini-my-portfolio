@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full px-40 flex flex-1 overflow-hidden">
+    <div id="home" class="w-full px-page flex flex-1 overflow-hidden">
 
         <div class="flex">
             <div class="flex items-end h-full pb-8">
@@ -34,7 +34,7 @@
             <img class="w-full h-full object-cover object-center" src="/img/cover.jpg"
                 alt="Lush green rolling farm hills of Bukit Jengkoang with a weathered concrete lookout shelter under a clear blue sky in Bumiaji, Batu">
 
-            <p class="absolute bottom-3 right-4 text-sm text-[#E5E5E5] select-none">
+            <p class="absolute bottom-3 right-4 text-sm text-[#E5E5E5] select-none left-10 text-right truncate">
                 SS: 1/1996s | Aperture: ƒ 2.4 | ISO: 40 | Φ 07° 49′ 34.5″ (S) | λ 112° 33′ 26.6″ (E)
             </p>
         </div>

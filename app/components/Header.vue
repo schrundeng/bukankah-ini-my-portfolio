@@ -1,7 +1,7 @@
 <template>
   <header class="items-stretch">
 
-    <div class="w-full px-40 flex items-center self-stretch justify-between">
+    <div class="w-full px-page flex items-center gap-12 self-stretch justify-between">
       <!-- left side, name -->
       <div class="text-2xl flex tracking-[0.2rem]">
         <a class="pt-12 pb-6 pr-5 self-stretch flex items-center" href="/"> MUHAMMAD</a>
@@ -20,7 +20,7 @@
         |
         <a href="#projects" class="nav-link"> projects</a>
         |
-        <a href="#about" class="nav-link"> contact</a>
+        <a href="#contact" class="nav-link"> contact</a>
         |
       </nav>
     </div>
