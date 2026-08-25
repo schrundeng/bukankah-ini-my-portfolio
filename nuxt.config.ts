@@ -5,5 +5,11 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss'
   ],
-  css: ['@/assets/css/main.css']
+  css: ['@/assets/css/main.css'],
+  vite: {
+    server: {
+      allowedHosts: ['.trycloudflare.com']
+    }
+  }
+
 })
