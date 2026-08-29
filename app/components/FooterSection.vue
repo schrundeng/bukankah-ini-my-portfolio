@@ -6,7 +6,7 @@
 
         <div id="contact" class="flex flex-col gap-10 py-12">
             <h1 class="text-5xl">Contact</h1>
-            <div class="grid grid-cols-2 gap-x-12 gap-y-4 text-2xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-4 text-2xl">
                 <p>Email: <a class="link-underline"
                         href="mailto:muhnaufalramadhan27@gmail.com">muhnaufalramadhan27[at]gmail.com</a></p>
                 <p>Instagram: <a class="link-underline" href="https://instagram.com/schrundeng" target="_blank"

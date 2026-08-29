@@ -1,12 +1,12 @@
 <template>
-    <div id="pics" class="w-full bg-secondary py-20">
+    <div id="pics" class="w-full overflow-hidden bg-secondary py-20">
         <div class="px-page flex flex-col gap-12">
             <h1 class="text-5xl text-secondary">Pics</h1>
 
         </div>
 
         <!-- picture slide -->
-        <div class="flex gap-0 overflow-x-auto no-scrollbar pl-page py-4 scroll-smooth">
+        <div class="flex gap-0 overflow-x-auto pl-page custom-scrollbar py-4 scroll-smooth">
             <div v-for="(picture, index) in pictures" :key="index" class="flex flex-col gap-3 shrink-0 w-[700px]">
                 <!-- top line -->
                 <div class="relative w-full h-4 flex items-center">

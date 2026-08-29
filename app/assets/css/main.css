@@ -1,53 +1,66 @@
 /* font */
 @font-face {
-    font-family: 'Libertinus Serif';
-    src: url(/fonts/LibertinusSerif-Regular.ttf) format('truetype');
+  font-family: "Libertinus Serif";
+  src: url(/fonts/LibertinusSerif-Regular.ttf) format("truetype");
 }
 /* color pallete */
 :root {
-    --bg-primary: #0E0E0E;
-    --bg-secondary: #F1F1F1;
-    --text-primary: #B7B7B7;
-    --text-secondary: #353535;
-    --white-line: #B7B7B7;
-    --black-line: #353535;
-    --font-libertinus: 'Libertinus Serif';
-
+  --bg-primary: #0e0e0e;
+  --bg-secondary: #f1f1f1;
+  --text-primary: #b7b7b7;
+  --text-secondary: #353535;
+  --white-line: #b7b7b7;
+  --black-line: #353535;
+  --font-libertinus: "Libertinus Serif";
 }
 /* conf */
 body {
-     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    border:var(--white-line);
-    font-family: var(--font-libertinus);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: var(--white-line);
+  font-family: var(--font-libertinus);
 }
 /* global padding */
+
 .px-page {
-  padding-left: clamp(2rem, 10vw, 12rem);
-  padding-right: clamp(2rem, 10vw, 12rem);
+  padding-left: clamp(2rem, 10vw, 8rem);
+  padding-right: clamp(2rem, 10vw, 8rem);
   max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* scrollbar for pics slide */
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 16px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--black-line);
+  background-clip: content-box;
+}
+
 /* secondary stuff for pics section... */
 
 .pl-page {
-    padding-left: clamp(2rem, 10vw, 12rem);
+  padding-left: clamp(2rem, 10vw, 8rem);
 }
 
 .bg-secondary {
-    background-color: var(--bg-secondary);
+  background-color: var(--bg-secondary);
 }
 
 .text-secondary {
-   color: var(--text-secondary)
+  color: var(--text-secondary);
 }
 
 .black-line {
-    background-color: var(--black-line);
+  background-color: var(--black-line);
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -56,4 +69,15 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* global padding for smol screens under 1440p */
+@media (max-width: 1300px) {
+  .px-page {
+    padding-left: clamp(1.5rem, 5vw, 4rem);
+    padding-right: clamp(1.5rem, 5vw, 4rem);
+  }
+  .pl-page {
+    padding-left: clamp(1.5rem, 5vw, 4rem);
+  }
 }

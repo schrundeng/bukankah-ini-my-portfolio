@@ -1,5 +1,5 @@
 <template>
-    <div id="home" class="w-full px-page flex flex-1 overflow-hidden">
+    <div id="home" class="w-full px-page flex flex-1 overflow-x-clip">
 
         <div class="flex">
             <div class="flex items-end h-full pb-8">

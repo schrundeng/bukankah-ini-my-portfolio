@@ -1,5 +1,5 @@
 <template>
-    <div id="about" class="w-full mt-32 px-page py-12 flex justify-between items-start gap-12">
+    <div id="about" class="w-full mt-32 px-page py-12 flex flex-col lg:flex-row justify-between items-start gap-12">
         <!-- left side, about, desc, download cv -->
         <div class="max-w-3xl flex flex-col gap-10">
             <h1 class="text-5xl">About Me</h1>
@@ -15,8 +15,8 @@
             <button class="w-[357px] py-4 border border-[#B7B7B7] text-2xl text-center">Download CV</button>
         </div>
         <!-- right side, my pic -->
-        <div class="flex justify-end items-start shrink-0">
-            <img class="w-[357px] object-cover object-top aspect-square" src="/img/me.jpg"
+        <div class="flex justify-end items-start">
+            <img class="max-w-[357px] w-full md:w-auto object-cover object-top" src="/img/me.jpg"
                 alt="Muhammad Naufal Ramadhan portrait">
         </div>
     </div>
