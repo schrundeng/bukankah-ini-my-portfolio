@@ -1,5 +1,5 @@
 <template>
-    <div id="home" class="w-full px-page flex flex-1 overflow-x-clip">
+    <div id="home" class="scroll-mt-28 w-full px-page min-h-0 flex flex-1 overflow-x-clip">
 
         <div class="flex">
             <div class="flex items-end h-full pb-8">
@@ -24,13 +24,14 @@
             </div>
             <!-- crosshair line gradient thing -->
             <span class="w-px self-stretch bg-gradient-to-b from-[#B7B7B7] to-transparent"></span>
-            <p class="pl-6 mt-60 text-2xl [writing-mode:vertical-rl] tracking-[0.08em]">jack of all trades, master
+            <p class="pl-6 my-auto self-center text-2xl [writing-mode:vertical-rl] tracking-[0.08em]">jack of all
+                trades, master
                 of...
                 some.
             </p>
         </div>
 
-        <div class="flex-1 h-full pl-6 pt-20 relative">
+        <div class="flex-1 h-full pl-6 pt-20 relative min-h-0 overflow-hidden">
             <img class="w-full h-full object-cover object-center" src="/img/cover.jpg"
                 alt="Lush green rolling farm hills of Bukit Jengkoang with a weathered concrete lookout shelter under a clear blue sky in Bumiaji, Batu">
 

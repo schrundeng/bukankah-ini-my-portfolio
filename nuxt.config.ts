@@ -2,6 +2,19 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  app: {
+    head:{
+      link: [
+        {
+          rel: 'preload',
+          href: '/fonts/LibertinusSerif-Regular.ttf',
+          as: 'font',
+          type: 'font/ttf',
+          crossorigin: 'anonymous'
+        }
+      ]
+    }
+  },
   modules: [
     '@nuxtjs/tailwindcss'
   ],

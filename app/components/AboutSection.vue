@@ -1,5 +1,6 @@
 <template>
-    <div id="about" class="w-full mt-32 px-page py-12 flex flex-col lg:flex-row justify-between items-start gap-12">
+    <div id="about"
+        class="scroll-mt-24 w-full mt-32 px-page py-12 flex flex-col lg:flex-row justify-between items-start gap-12">
         <!-- left side, about, desc, download cv -->
         <div class="max-w-3xl flex flex-col gap-10">
             <h1 class="text-5xl">About Me</h1>

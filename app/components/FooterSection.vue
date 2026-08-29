@@ -4,7 +4,7 @@
             <img class="w-full object-contain" src="/img/render.jpg" alt="Nurture Diorama Render">
         </div>
 
-        <div id="contact" class="flex flex-col gap-10 py-12">
+        <div id="contact" class="scroll-mt-24 flex flex-col gap-10 py-12">
             <h1 class="text-5xl">Contact</h1>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-4 text-2xl">
                 <p>Email: <a class="link-underline"

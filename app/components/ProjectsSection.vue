@@ -1,5 +1,5 @@
 <template>
-    <div id="projects" class="w-full px-page py-12 flex flex-col">
+    <div id="projects" class="w-full scroll-mt-24 px-page py-12 flex flex-col">
         <h1 class="text-5xl">Projects</h1>
         <div class="flex justify-between items-stretch gap-8 md:gap-6 mt-16">
             <!-- project cards -->
