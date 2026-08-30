@@ -74,17 +74,17 @@
 <script setup>
 const pictures = [
     {
-        image: '/img/fify.jpg',
+        image: '/img/fify.webp',
         alt: 'Pantai Melasti',
         text: 'Pantai Melasti | Φ 07° 49′ 34.5″ (S) | λ 112° 33′ 26.6″ (E)'
     },
     {
-        image: '/img/fify2.jpg',
+        image: '/img/fify2.webp',
         alt: 'Pantai Melasti',
         text: 'Pantai Melasti | Φ 07° 49′ 34.5″ (S) | λ 112° 33′ 26.6″ (E)'
     },
     {
-        image: '/img/fify3.jpeg',
+        image: '/img/fify3.webp',
         alt: 'Pantai Melasti',
         text: 'Pantai Melasti | Φ 07° 49′ 34.5″ (S) | λ 112° 33′ 26.6″ (E)'
     },

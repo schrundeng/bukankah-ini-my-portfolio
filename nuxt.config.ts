@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   css: ['@/assets/css/main.css'],
   vite: {
     server: {
-      allowedHosts: ['.trycloudflare.com']
+      allowedHosts: ['.kurnikov.ddns.net']
     }
   }
 

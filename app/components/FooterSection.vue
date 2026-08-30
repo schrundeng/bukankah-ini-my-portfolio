@@ -1,7 +1,7 @@
 <template>
     <div class="w-full px-page py-12 flex flex-col">
         <div class="w-full flex justify-center py-24">
-            <img class="w-full object-contain" src="/img/render.jpg" alt="Nurture Diorama Render">
+            <img class="w-full object-contain" src="/img/render.webp" alt="Nurture Diorama Render">
         </div>
 
         <div id="contact" class="scroll-mt-24 flex flex-col gap-10 py-12">

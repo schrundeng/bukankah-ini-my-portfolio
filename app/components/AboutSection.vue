@@ -19,7 +19,7 @@
         </div>
         <!-- right side, my pic -->
         <div class="flex justify-end items-start">
-            <img class="max-w-[357px] w-full md:w-auto object-cover object-top" src="/img/me.jpg"
+            <img class="max-w-[357px] w-full md:w-auto object-cover object-top" src="/img/me.webp"
                 alt="Muhammad Naufal Ramadhan portrait">
         </div>
     </div>
