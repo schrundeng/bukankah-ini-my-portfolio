@@ -4,11 +4,16 @@
     <div class="w-full px-page flex items-stretch gap-12 self-stretch justify-between">
       <!-- left side, name -->
       <div class="text-2xl flex tracking-[0.2rem]">
-        <a class="pr-5 w-[189.5px] self-stretch flex items-center nav-shrink"
+        <a class="pr-5 w-[44px] md:w-[189.5px] self-stretch flex items-center nav-shrink"
           :class="isScrolled ? 'py-4' : 'pt-12 pb-6'" href="/">
-          MUHAMMAD</a>
+          <span class="md:hidden">M</span>
+          <span class="hidden md:inline">MUHAMMAD</span>
+        </a>
         <span class="w-px self-stretch bg-[#B7B7B7]"></span>
-        <a class="pl-5 nav-shrink" :class="isScrolled ? 'py-4' : 'pt-12 pb-6'" href="/"> NAUFAL RAMADHAN</a>
+        <a class="pl-5 nav-shrink" :class="isScrolled ? 'py-4' : 'pt-12 pb-6'" href="/">
+          <span class="md:hidden">NR</span>
+          <span class="hidden md:inline">NAUFAL RAMADHAN</span>
+        </a>
       </div>
 
       <!-- right side, nav -->
@@ -92,7 +97,6 @@
 </style>
 
 <script setup>
-
 // shrink navbar after 40px scroll down
 const isScrolled = ref(false);
 
@@ -118,7 +122,7 @@ const scrollToSection = (e, id) => {
   isOpen.value = false;
   const target = document.querySelector(id);
   if (!target) return;
-  const targetY = target.getBoundingClientRect().top + window.scrollY - 80;
+  const targetY = id === '#home' ? 0 : target.getBoundingClientRect().top + window.scrollY - 80;
   const startY = window.scrollY;
   const distance = targetY - startY;
   const duration = 900;

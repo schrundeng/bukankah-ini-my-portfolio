@@ -9,6 +9,7 @@
   --bg-secondary: #f1f1f1;
   --text-primary: #b7b7b7;
   --text-secondary: #353535;
+  --text-tertiary: #7a7a7a;
   --white-line: #b7b7b7;
   --black-line: #353535;
   --font-libertinus: "Libertinus Serif";
@@ -57,6 +58,10 @@ body {
 
 .text-secondary {
   color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
 }
 
 .black-line {

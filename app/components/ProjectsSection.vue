@@ -1,7 +1,7 @@
 <template>
     <div id="projects" class="w-full scroll-mt-24 px-page py-12 flex flex-col">
         <h1 class="text-5xl">Projects</h1>
-        <div class="flex justify-between items-stretch gap-8 md:gap-6 mt-16">
+        <div class="flex flex-col md:flex-row justify-between items-stretch gap-8 md:gap-6 mt-16">
             <!-- project cards -->
             <div v-for="project in projects" :key="project.title"
                 class="w-full border flex flex-col justify-between overflow-hidden group">

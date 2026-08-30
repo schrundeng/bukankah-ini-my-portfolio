@@ -2,9 +2,9 @@
     <div id="home" class="scroll-mt-28 w-full px-page min-h-0 flex flex-1 overflow-x-clip">
 
         <div class="flex">
-            <div class="flex items-end h-full pb-8">
+            <div class="flex w-[44px] md:w-[189.5px] items-end h-full pb-8">
                 <!-- arrow div -->
-                <div class="flex flex-col items-center pl-[70.5px] pr-8 h-2/3">
+                <div class="md:flex flex-col hidden items-center pl-[70.5px] pr-8 h-2/3">
                     <!-- arrow stem -->
                     <div class="w-px flex-1 bg-gradient-to-t from-[#B7B7B7] to-transparent"></div>
                     <!-- arrow tip -->
