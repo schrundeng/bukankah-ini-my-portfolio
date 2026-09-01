@@ -46,10 +46,27 @@ body {
   background-clip: content-box;
 }
 
+/* scrollbar for cert modal */
+
+.secondary-custom-scrollbar::-webkit-scrollbar {
+  height: 16px;
+}
+.secondary-custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.secondary-custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--bg-secondary);
+  background-clip: content-box;
+}
+
 /* secondary stuff for pics section... */
 
 .pl-page {
   padding-left: clamp(2rem, 10vw, 8rem);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
 }
 
 .bg-secondary {
