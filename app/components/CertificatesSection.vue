@@ -5,7 +5,13 @@
   >
     <h1 class="text-5xl">Certificates</h1>
 
-    <CertificateView />
+    <Transition name="modal" :duration="500">
+      <CertificateView
+        v-if="selectedCert"
+        :certificate="selectedCert"
+        @close="selectedCert = null"
+      />
+    </Transition>
 
     <div class="flex flex-col gap-6 text-xl md:text-2xl">
       <div
@@ -26,9 +32,22 @@
         </div>
 
         <div class="w-24 text-right">
-          <a class="link-underline" :href="certificate.link">{{
-            certificate.action
-          }}</a>
+          <a
+            v-if="certificate.action === 'Verify'"
+            :href="certificate.link"
+            target="_blank"
+            class="link-underline"
+          >
+            {{ certificate.action }}
+          </a>
+          <button
+            v-else
+            aria-label="View certificate"
+            class="link-underline cursor-pointer"
+            @click="selectedCert = certificate"
+          >
+            {{ certificate.action }}
+          </button>
         </div>
       </div>
     </div>
@@ -36,18 +55,24 @@
 </template>
 
 <script setup>
+// save state for selected certificate modal
+const selectedCert = ref(null);
+
+// certificates list
 const certificates = [
   {
     year: "2025",
     title: "Backend Developer Competency",
     issuer: "DOT Indonesia",
     action: "View",
+    img: "/img/certs/dot.webp",
     link: "#",
   },
   {
     year: "2024",
     title: "Full Stack Web Development",
     issuer: "SMK Telkom Malang",
+    img: "/img/certs/smk-telkom.webp",
     action: "View",
     link: "#",
   },
@@ -56,13 +81,15 @@ const certificates = [
     title: "Industry Internship (UPT PTIK)",
     issuer: "Universitas Negeri Malang",
     action: "View",
+    img: "/img/certs/ptik-um.webp",
     link: "#",
   },
   {
     year: "2024",
     title: "HTML5 Application Development",
     issuer: "Certiport / Pearson VUE",
-    action: "Verify",
+    action: "View",
+    img: "/img/certs/certiport.webp",
     link: "#",
   },
   {
@@ -70,6 +97,7 @@ const certificates = [
     title: "UI/UX Design Foundation",
     issuer: "UKM LAOS Universitas Negeri Jember",
     action: "View",
+    img: "/img/certs/ukm-laos.webp",
     link: "#",
   },
 ];
@@ -78,5 +106,35 @@ const certificates = [
 <style scoped>
 .link-underline {
   @apply relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-[#B7B7B7] after:transition-all after:duration-300 hover:after:w-full;
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 150ms ease-out;
+}
+
+.modal-enter-active :deep(.cert-card) {
+  transition:
+    transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 100ms ease-out;
+  transform-origin: center;
+}
+
+.modal-leave-active :deep(.cert-card) {
+  transition:
+    transform 200ms ease-in,
+    opacity 200ms ease-in;
+  transform-origin: center;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-from :deep(.cert-card),
+.modal-leave-to :deep(.cert-card) {
+  opacity: 0;
+  transform: scale(0.95);
 }
 </style>
