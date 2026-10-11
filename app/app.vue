@@ -14,3 +14,7 @@
     <FooterSection />
   </div>
 </template>
+
+<script setup>
+const isCvOpen = useState("cv", () => false);
+</script>

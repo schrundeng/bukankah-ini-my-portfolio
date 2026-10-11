@@ -46,7 +46,7 @@
           about</a
         >
         |
-        <a href="#cv" class="nav-link"> cv</a>
+        <a @click="isCvOpen = true" class="cursor-pointer nav-link"> cv</a>
         |
         <a
           href="#projects"
@@ -212,4 +212,7 @@ const scrollToSection = (e, id) => {
   };
   window.requestAnimationFrame(step);
 };
+
+// modal status
+const isCvOpen = useState("cv", () => false);
 </script>
