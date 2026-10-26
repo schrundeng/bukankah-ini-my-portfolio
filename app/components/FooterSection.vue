@@ -1,6 +1,6 @@
 <template>
   <div class="w-full px-page py-12 flex flex-col">
-    <div class="w-full flex justify-center py-24">
+    <div class="w-full flex justify-center">
       <img
         class="w-full object-contain"
         src="/img/render.webp"
