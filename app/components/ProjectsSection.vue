@@ -24,25 +24,56 @@
           <p class="text-base">{{ project.desc }}</p>
         </div>
         <!-- view and arrow -->
-        <a
-          :href="project.link"
-          class="group/link flex p-3 mt-auto justify-end items-center gap-3 self-end"
+        <div
+          class="flex items-center cursor-pointer gap-3 p-3 mt-auto justify-end self-end"
         >
-          <span class="text-base link-underline">View</span>
-          <svg
-            class="link-arrow"
-            width="66"
-            height="13"
-            viewBox="0 0 66 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <a
+            v-if="project.github"
+            :href="project.github"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group/link flex items-center gap-3"
           >
-            <path
-              d="M51.5 0.168213C54 7.16821 56.5936 9.20557 65.5 11.6682H0"
-              stroke="#B7B7B7"
-            />
-          </svg>
-        </a>
+            <span class="text-base link-underline">GitHub</span>
+            <svg
+              v-if="!project.link"
+              class="link-arrow"
+              width="66"
+              height="13"
+              viewBox="0 0 66 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M51.5 0.168213C54 7.16821 56.5936 9.20557 65.5 11.6682H0"
+                stroke="#B7B7B7"
+              />
+            </svg>
+          </a>
+
+          <a
+            v-if="project.link"
+            :href="project.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group/link flex items-center gap-3"
+          >
+            <span class="text-base link-underline">View</span>
+            <svg
+              class="link-arrow"
+              width="66"
+              height="13"
+              viewBox="0 0 66 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M51.5 0.168213C54 7.16821 56.5936 9.20557 65.5 11.6682H0"
+                stroke="#B7B7B7"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -50,33 +81,41 @@
 
 <script setup>
 const projects = [
+  // {
+  //   title: "Tafe",
+  //   desc: "Online table booking service",
+  //   image: "/img/tafe.webp",
+  //   link: "#",
+  // },
   {
-    title: "Tafe",
-    desc: "Online table booking service",
-    image: "/img/tafe.webp",
-    link: "#",
+    title: "DPM Governance Suite",
+    desc: "Legislative archive and budget management platform",
+    image: "/img/dpm.webp",
+    github: "https://github.com/schrundeng/dpm-governance-suite",
   },
   {
     title: "Crusts & Daisies",
-    desc: "Front page for snack something",
+    desc: "Pop-up bakery storefront and pre-order platform",
     image: "/img/crusts.webp",
-    link: "#",
+    link: "https://crust.kurnikov.my.id/",
+    github: "https://github.com/schrundeng/crust-fe-nuxt",
   },
   {
     title: "GreenEvent",
-    desc: "GIS based environment events platform",
+    desc: "GIS-based environmental event platform cooked in a frantic 2-week competition sprint",
     image: "/img/greenevent.webp",
-    link: "#",
+    link: "https://greenevent.kurnikov.my.id/",
+    github: "https://github.com/schrundeng/greenEvent",
   },
 ];
 </script>
 
 <style scoped>
 .link-underline {
-  @apply relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-[#B7B7B7] after:transition-all after:duration-300 group-hover:after:w-full;
+  @apply relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-[#B7B7B7] after:transition-all after:duration-300 group-hover/link:after:w-full;
 }
 
 .link-arrow {
-  @apply transition-transform duration-300 group-hover/link:translate-x-1;
+  @apply transition-transform duration-300 group-hover:translate-x-1;
 }
 </style>

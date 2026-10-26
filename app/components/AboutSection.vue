@@ -14,8 +14,8 @@
       <div class="text-xl md:text-2xl leading-snug space-y-8">
         <p>Frontend leaning developer with backend roots.</p>
         <p>
-          I'm 19, based in Klagenfurt am Wörthersee, Austria, studying robotics
-          and artificial intelligence.
+          I'm {{ age }}, based in Klagenfurt am Wörthersee, Austria, studying
+          robotics and artificial intelligence.
         </p>
         <p>
           I handle both sides of the screen: designing interfaces, wiring
@@ -84,4 +84,15 @@
 
 <script setup>
 const isCvOpen = useState("cv", () => false);
+
+const age = computed(() => {
+  const birthDate = new Date(2006, 8, 27); //month 8 bcs it starts from 0???
+  const today = new Date();
+  let diff = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    diff--;
+  }
+  return diff;
+});
 </script>
