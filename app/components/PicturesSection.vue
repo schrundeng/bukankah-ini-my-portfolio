@@ -80,7 +80,9 @@
         <div
           class="h-[240px] w-[180px] md:w-96 md:h-[501px] border-[1.5px] border-[#353535] mx-4 flex flex-col items-center justify-center gap-2 text-secondary group-hover:border-solid group-hover:bg-[#e8e8e8] transition-colors"
         >
-          <p class="text-xl md:text-2xl">View Full Gallery</p>
+          <p class="text-xl text-center md:text-2xl">
+            View Full Gallery (Soon)
+          </p>
           <svg
             class="link-arrow -scale-y-100"
             width="66"
