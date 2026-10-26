@@ -12,7 +12,7 @@
         <div class="flex items-center gap-6 md:gap-8">
           <!-- cv download -->
           <a
-            href="/Muhammad_Naufal_Ramadhan_Larp.pdf"
+            href="/Muhammad_Naufal_Ramadhan_Resume.pdf"
             download
             class="text-xl md:text-2xl link-underline"
             >Download</a
@@ -40,7 +40,7 @@
       >
         <img
           class="max-h-[80dvh] w-auto max-w-full object-contain"
-          src="/img/cv.jpg"
+          src="/img/cv.webp"
           alt="Curriculum Vitae"
         />
       </div>
