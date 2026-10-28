@@ -8,15 +8,28 @@
     >
       <div class="flex flex-row items-center justify-between pb-4 md:pb-6">
         <!-- cv title -->
-        <h1 class="text-xl md:text-2xl">Curriculum Vitae</h1>
+        <h2 class="text-xl md:text-2xl">Curriculum Vitae</h2>
         <div class="flex items-center gap-6 md:gap-8">
           <!-- cv download -->
           <a
+            aria-label="Download CV"
             href="/Muhammad_Naufal_Ramadhan_Resume.pdf"
             download
             class="text-xl md:text-2xl link-underline"
-            >Download</a
           >
+            <span class="hidden md:inline">Download</span>
+            <svg
+              class="md:hidden w-[20px] h-[20px]"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 1.5 V11 M2.5 7L 8 11 L13.5 7 M1.5 14.5 H14.5"
+                stroke="#B7B7B7"
+              />
+            </svg>
+          </a>
 
           <!-- close button -->
           <button aria-label="Close modal" @click="$emit('close')">
@@ -39,7 +52,7 @@
         class="flex-1 min-h-0 flex overflow-y-auto secondary-custom-scrollbar justify-center"
       >
         <img
-          class="max-h-[80dvh] w-auto max-w-full object-contain"
+          class="max-h-[80dvh] aspect-[2550/3300] w-auto max-w-full object-contain"
           src="/img/cv.webp"
           alt="Curriculum Vitae"
         />

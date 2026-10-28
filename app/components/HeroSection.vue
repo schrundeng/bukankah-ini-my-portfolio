@@ -55,6 +55,8 @@
 
     <div class="flex-1 h-full pl-6 pt-20 relative min-h-0 overflow-hidden">
       <img
+        loading="eager"
+        fetchpriority="high"
         class="w-full h-full object-cover object-center"
         src="/img/cover.webp"
         alt="Lush green rolling farm hills of Bukit Jengkoang with a weathered concrete lookout shelter under a clear blue sky in Bumiaji, Batu"

@@ -8,7 +8,7 @@
     >
       <div class="flex flex-row items-center justify-between pb-4 md:pb-6">
         <!-- certificate title -->
-        <h1 class="text-xl md:text-2xl">{{ certificate?.title }}</h1>
+        <h2 class="text-xl md:text-2xl">{{ certificate?.title }}</h2>
         <!-- close button -->
         <button aria-label="Close modal" @click="$emit('close')">
           <svg
@@ -31,7 +31,7 @@
         <img
           class="w-auto max-h-full max-w-full object-contain"
           :src="certificate?.img"
-          alt="sert"
+          alt="Certificate preview"
         />
       </div>
     </div>

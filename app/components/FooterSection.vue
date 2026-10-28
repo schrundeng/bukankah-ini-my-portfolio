@@ -1,7 +1,8 @@
 <template>
-  <div class="w-full px-page py-12 flex flex-col">
+  <footer class="w-full px-page py-12 flex flex-col">
     <div class="w-full flex justify-center">
       <img
+        loading="lazy"
         class="w-full object-contain"
         src="/img/render.webp"
         alt="Nurture Diorama Render"
@@ -9,7 +10,7 @@
     </div>
 
     <div id="contact" class="scroll-mt-24 flex flex-col gap-10 py-12">
-      <h1 class="text-5xl">Contact</h1>
+      <h2 class="text-5xl">Contact</h2>
       <div
         class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-4 text-xl md:text-2xl"
       >
@@ -86,7 +87,7 @@
       </p>
       <p>Handcrafted without vibe coding, kurnikov, 2026</p>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style scoped>

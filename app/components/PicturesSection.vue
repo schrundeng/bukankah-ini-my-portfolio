@@ -1,7 +1,7 @@
 <template>
   <div id="pics" class="w-full overflow-hidden bg-secondary py-12 md:py-20">
     <div class="px-page flex flex-col gap-12">
-      <h1 class="text-5xl text-secondary">Pics</h1>
+      <h2 class="text-5xl text-secondary">Pics</h2>
     </div>
 
     <!-- picture slide -->
@@ -14,8 +14,8 @@
         class="flex flex-col gap-3 shrink-0"
         :class="
           picture.aspect === '3/4'
-            ? 'w-[212px] md:w-[408px]'
-            : 'w-[352px] md:w-[700px]'
+            ? 'w-[254px] md:w-[443px]'
+            : 'w-[427px] md:w-[762.5px]'
         "
       >
         <!-- top line -->
@@ -26,7 +26,7 @@
           ></div>
           <span class="w-px h-3 black-line absolute top-1/2 left-0"></span>
           <span
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary px-2 text-xs text-secondary z-10"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary px-2 text-s text-secondary z-10"
           >
             [{{ String(index + 1).padStart(2, "0") }}]
           </span>
@@ -51,9 +51,10 @@
           ></div>
           <span class="w-px h-3 black-line absolute bottom-1/2 left-0"></span>
           <p
-            class="relative text-secondary z-10 bg-secondary px-3 text-xs whitespace-nowrap"
+            class="relative text-secondary z-10 bg-secondary px-3 text-s whitespace-nowrap"
           >
-            {{ picture.text }}
+            <span class="md:hidden">{{ picture.alt }}</span>
+            <span class="hidden md:inline">{{ picture.text }}</span>
           </p>
         </div>
       </div>
@@ -71,14 +72,14 @@
           ></div>
           <span class="w-px h-3 black-line absolute top-1/2 left-0"></span>
           <span
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary px-2 text-xs text-secondary z-10"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary px-2 text-s text-secondary z-10"
           >
             [More...]
           </span>
         </div>
         <!-- picture frame -->
         <div
-          class="h-[240px] w-[180px] md:w-96 md:h-[501px] border-[1.5px] border-[#353535] mx-4 flex flex-col items-center justify-center gap-2 text-secondary group-hover:border-solid group-hover:bg-[#e8e8e8] transition-colors"
+          class="h-[296px] w-[222px] md:w-96 md:h-[548px] border-[1.5px] border-[#353535] mx-4 flex flex-col items-center justify-center gap-2 text-secondary group-hover:border-solid group-hover:bg-[#e8e8e8] transition-colors"
         >
           <p class="text-xl text-center md:text-2xl">
             View Full Gallery (Soon)
@@ -106,7 +107,7 @@
           ></div>
           <span class="w-px h-3 black-line absolute bottom-1/2 left-0"></span>
           <p
-            class="relative text-secondary z-10 bg-secondary px-3 text-xs whitespace-nowrap"
+            class="relative text-secondary z-10 bg-secondary px-3 text-s whitespace-nowrap"
           >
             Explore Archive
           </p>
@@ -117,34 +118,50 @@
 </template>
 
 <script setup>
+// warm up the imgs in cache before viewport
+onMounted(() => {
+  const warmPics = () => {
+    pictures.forEach((p) => {
+      const img = new Image();
+      img.src = p.image;
+    });
+  };
+
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(warmPics);
+  } else {
+    setTimeout(warmPics, 2000);
+  }
+});
+
 const pictures = [
   {
     image: "/img/pics/selok_gendong.webp",
     alt: "Pantai Selok",
-    text: "Pantai Selok | Φ 08° 23′ 49.4″ (S) | λ 112° 30′ 50.9″ (E)",
+    text: "Pantai Selok | Φ 08° 23′ 49.4″ (S) λ 112° 30′ 50.9″ (E)",
     aspect: "3/4",
   },
   {
     image: "/img/pics/panglipuran_roof.webp",
     alt: "Desa Panglipuran",
-    text: "Desa Penglipuran | Φ 08° 25′ 20.4″ (S) | λ 115° 21′ 33.5″ (E)",
+    text: "Desa Penglipuran | Φ 08° 25′ 20.4″ (S) λ 115° 21′ 33.5″ (E)",
   },
   {
     image: "/img/pics/ulun_danu_baratan.webp",
     alt: "Candi Ulun Danu Baratan",
-    text: "Candi Ulun Danu Baratan | Φ 08° 16′ 32.2″ (S) | λ 115° 09′ 59.4″ (E)",
+    text: "Cd. Ulun Danu Baratan | Φ 08° 16′ 32.2″ (S) λ 115° 09′ 59.4″ (E)",
 
     aspect: "3/4",
   },
   {
     image: "/img/pics/warung_brakseng.webp",
     alt: "Warung Brakseng",
-    text: "Warung Brakseng | Φ 07° 45′ 24.1″ (S) | λ 112° 32′ 31.6″ (E)",
+    text: "Warung Brakseng | Φ 07° 45′ 24.1″ (S) λ 112° 32′ 31.6″ (E)",
   },
   {
     image: "/img/pics/brakseng.webp",
     alt: "Bukit Brakseng",
-    text: "Bukit Brakseng | Φ 07° 45′ 23.2″ (S) | λ 112° 32′ 31.1″ (E)",
+    text: "Bukit Brakseng | Φ 07° 45′ 23.2″ (S) λ 112° 32′ 31.1″ (E)",
 
     aspect: "3/4",
   },

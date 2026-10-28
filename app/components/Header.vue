@@ -4,7 +4,7 @@
       class="w-full px-page flex items-stretch gap-12 self-stretch justify-between"
     >
       <!-- left side, name -->
-      <div class="text-2xl flex tracking-[0.2rem]">
+      <h1 class="text-2xl flex tracking-[0.2rem]">
         <a
           class="pr-5 w-[44px] md:w-[189.5px] self-stretch flex items-center nav-shrink"
           :class="isScrolled ? 'py-4' : 'pt-12 pb-6'"
@@ -22,7 +22,7 @@
           <span class="md:hidden">NR</span>
           <span class="hidden md:inline">NAUFAL RAMADHAN</span>
         </a>
-      </div>
+      </h1>
 
       <!-- right side, nav -->
       <nav
@@ -46,7 +46,9 @@
           about</a
         >
         |
-        <a @click="isCvOpen = true" class="cursor-pointer nav-link"> cv</a>
+        <button @click="isCvOpen = true" class="cursor-pointer nav-link">
+          cv
+        </button>
         |
         <a
           href="#projects"
@@ -67,6 +69,7 @@
       </nav>
       <!-- hamburgir for less than 1024px displays -->
       <button
+        aria-label="Toggle navigation menu"
         class="flex lg:hidden nav-shrink items-center"
         :class="isScrolled ? 'py-4' : 'pt-12 pb-6'"
         @click="isOpen = !isOpen"

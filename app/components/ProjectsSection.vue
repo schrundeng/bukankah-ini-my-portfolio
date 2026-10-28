@@ -1,6 +1,6 @@
 <template>
   <div id="projects" class="w-full scroll-mt-24 px-page py-12 flex flex-col">
-    <h1 class="text-5xl">Projects</h1>
+    <h2 class="text-5xl">Projects</h2>
     <div
       class="flex flex-col md:flex-row justify-between items-stretch gap-8 md:gap-6 mt-16"
     >
@@ -13,6 +13,7 @@
         <!-- card project img -->
         <div class="w-full aspect-[4/3] bg-[#1a1a1a] shrink-0 overflow-hidden">
           <img
+            loading="lazy"
             class="w-full h-full object-cover"
             :src="project.image"
             :alt="project.title"

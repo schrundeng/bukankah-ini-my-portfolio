@@ -4,7 +4,24 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head:{
+      title: 'Muhammad Naufal Ramadhan',
+      htmlAttrs: {
+        lang: 'en'
+      },
+
+      meta: [
+        {
+          name: 'description',
+          content: 'Portfolio of Muhammad Naufal Ramadhan, student and developer based in Klagenfurt, Austria.'
+        }
+      ],
+
       link: [
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/favicon.svg'
+        },
         {
           rel: 'preload',
           href: '/fonts/LibertinusSerif-Regular.ttf',

@@ -2,6 +2,7 @@
 @font-face {
   font-family: "Libertinus Serif";
   src: url(/fonts/LibertinusSerif-Regular.ttf) format("truetype");
+  font-display: swap;
 }
 /* color pallete */
 :root {

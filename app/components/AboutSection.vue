@@ -5,7 +5,7 @@
   >
     <!-- left side, about, desc, download cv -->
     <div class="max-w-3xl flex flex-col gap-10">
-      <h1 class="text-5xl">About Me</h1>
+      <h2 class="text-5xl">About Me</h2>
       <!-- cv modal -->
       <Transition name="modal" :duration="500">
         <CvView v-if="isCvOpen" @close="isCvOpen = false" />
@@ -30,7 +30,7 @@
       <!-- download cv button -->
       <button
         class="w-full group md:w-[357px] py-4 border border-[#B7B7B7] text-xl md:text-2xl text-center"
-        @click="isCvOpen = true"
+        @click="openCv"
       >
         <span class="link-underline">Download CV</span>
       </button>
@@ -84,6 +84,20 @@
 
 <script setup>
 const isCvOpen = useState("cv", () => false);
+
+// silently load the cv
+onMounted(() => {
+  const img = new Image();
+  img.src = "/img/cv.webp";
+});
+
+//only show the img after gpu decode i think
+const openCv = async () => {
+  const img = new Image();
+  img.src = "/img/cv.webp";
+  await img.decode().catch(() => {});
+  isCvOpen.value = true;
+};
 
 const age = computed(() => {
   const birthDate = new Date(2006, 8, 27); //month 8 bcs it starts from 0???

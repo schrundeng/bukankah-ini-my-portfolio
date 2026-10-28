@@ -3,7 +3,7 @@
     id="certificates"
     class="w-full px-page py-12 pb-32 flex flex-col gap-12"
   >
-    <h1 class="text-5xl">Certificates</h1>
+    <h2 class="text-5xl">Certificates</h2>
 
     <Transition name="modal" :duration="500">
       <CertificateView
@@ -44,7 +44,7 @@
             v-else
             aria-label="View certificate"
             class="link-underline cursor-pointer"
-            @click="selectedCert = certificate"
+            @click="openCert(certificate)"
           >
             {{ certificate.action }}
           </button>
@@ -55,6 +55,32 @@
 </template>
 
 <script setup>
+//cert img load silently to cache?
+onMounted(() => {
+  const warmCache = () => {
+    certificates.forEach((c) => {
+      if (c.img) {
+        const img = new Image();
+        img.src = c.img;
+      }
+    });
+  };
+
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(warmCache);
+  } else {
+    setTimeout(warmCache, 2000);
+  }
+});
+
+//only show the img after gpu decode i think
+const openCert = async (cert) => {
+  const img = new Image();
+  img.src = cert.img;
+  await img.decode().catch(() => {});
+  selectedCert.value = cert;
+};
+
 // save state for selected certificate modal
 const selectedCert = ref(null);
 
