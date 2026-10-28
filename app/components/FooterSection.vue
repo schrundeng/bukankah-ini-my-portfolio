@@ -138,6 +138,6 @@ const colophon = [
   { label: "Art Direction Reference", val: "Samuel Burgess-Johnson" },
   { label: "Typography", val: "Libertinus Serif" },
   { label: "Built With", val: "Nuxt, Tailwind CSS" },
-  { label: "Hosted On", val: "My Proxmox Node, Caddy, Cloudflare" },
+  { label: "Hosted On", val: "Cloudflare Pages" },
 ];
 </script>
